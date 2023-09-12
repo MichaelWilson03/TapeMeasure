@@ -1,0 +1,97 @@
+/* App.css */
+
+/* ... (previous styles) */
+
+.App {
+  text-align: center;
+  background-color: #f8f8f8;
+  font-family: Arial, sans-serif;
+}
+
+header {
+  margin-bottom: 20px;
+  font-size: 36px;
+  font-weight: bold;
+  color: #e91e63; /* Pink */
+  border-bottom: 1px solid #e91e63;
+  padding-bottom: 10px;
+  width: 100%;
+  text-transform: uppercase;
+}
+
+main {
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.inputContainer {
+  margin-bottom: 20px;
+}
+
+label,
+input {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.tooltip {
+  display: none;
+  font-size: 14px;
+  color: #999;
+}
+
+input:focus + .tooltip {
+  display: inline-block;
+}
+
+#calculateButton {
+  background-color: #e91e63;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-weight: bold;
+}
+
+#calculateButton:hover {
+  background-color: #c2185b; /* Darker pink */
+}
+
+#resultSection {
+  font-size: 24px;
+  font-weight: bold;
+  color: #555;
+  margin-top: 20px;
+}
+
+.tapeMeasureContainer {
+  position: relative;
+  width: 100%;
+  margin-top: 40px;
+
+}
+
+
+
+input[type="number"] {
+  padding: 10px;
+  border: 2px solid #f2c3d2;
+  border-radius: 10px;
+  font-size: 16px;
+  outline: none;
+  transition: border-color 0.3s ease-in-out;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+input[type="number"]:focus {
+  border-color: #ff85a2;
+}
+
