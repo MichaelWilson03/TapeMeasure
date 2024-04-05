@@ -1,97 +1,289 @@
-/* App.css */
-
-/* ... (previous styles) */
+body, html {
+  margin: 0;
+  padding: 0;
+  background-color: #f0e4d7; /* Soft cream background */
+  color: #333; /* Darker text for better readability */
+  font-family: 'Comic Neue', cursive, sans-serif; /* A more playful font */
+}
 
 .App {
-  text-align: center;
-  background-color: #f8f8f8;
-  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  flex-direction: column;
 }
 
 header {
-  margin-bottom: 20px;
-  font-size: 36px;
-  font-weight: bold;
-  color: #e91e63; /* Pink */
-  border-bottom: 1px solid #e91e63;
-  padding-bottom: 10px;
-  width: 100%;
-  text-transform: uppercase;
+  color: #ff686b; /* Soft pink for headers */
 }
 
-main {
-  padding: 20px;
-  max-width: 800px;
-  margin: 0 auto;
-  background-color: white;
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+input, button {
+  padding: 10px;
+  margin: 5px 0; /* Add space between inputs/buttons */
+  border: 2px solid #ff686b; /* Border color to match the header */
+  background-color: #fff;
+  color: #333;
+  font-size: 16px;
+  border-radius: 20px; /* Rounded corners for a bubbly look */
+  outline: none; /* Removes the default focus outline */
+  width: 80%; /* Makes the inputs and button wider */
+  box-sizing: border-box; /* Ensures padding doesn't add to the width */
+}
+nav ul {
+  list-style-type: none;
+  padding: 0;
 }
 
-.inputContainer {
-  margin-bottom: 20px;
+nav ul li {
+  display: inline;
+  margin-right: 10px;
 }
 
-label,
-input {
-  display: block;
-  margin-bottom: 10px;
+nav ul li a {
+  text-decoration: none;
+  color: #ff686b; /* Your link color */
 }
 
-.tooltip {
-  display: none;
-  font-size: 14px;
-  color: #999;
+nav ul li a:hover {
+  text-decoration: underline;
 }
 
-input:focus + .tooltip {
-  display: inline-block;
+input::placeholder {
+  color: #cbcbcb;
 }
 
-#calculateButton {
-  background-color: #e91e63;
-  color: white;
-  border: none;
-  padding: 12px 24px;
-  border-radius: 25px;
+button {
   cursor: pointer;
+  background-color: #ff686b;
+  color: #fff;
   transition: background-color 0.3s ease;
-  font-weight: bold;
 }
 
-#calculateButton:hover {
-  background-color: #c2185b; /* Darker pink */
+button:hover {
+  background-color: #ff5a5f; /* A slightly darker shade for hover */
 }
 
 #resultSection {
-  font-size: 24px;
-  font-weight: bold;
-  color: #555;
   margin-top: 20px;
-}
-
-.tapeMeasureContainer {
-  position: relative;
-  width: 100%;
-  margin-top: 40px;
-
-}
-
-
-
-input[type="number"] {
+  background-color: #ffafcc; /* A light, warm pink background for results */
+  color: #333;
   padding: 10px;
-  border: 2px solid #f2c3d2;
-  border-radius: 10px;
-  font-size: 16px;
-  outline: none;
-  transition: border-color 0.3s ease-in-out;
-  margin-bottom: 20px;
+  border-radius: 20px;
+  width: 80%;
+  box-sizing: border-box; /* Adjust box-sizing for consistent widths */
+}
+
+/* Main Page Styles */
+.main-container {
+  background-color: #fff; /* Neutral background */
+  color: #444; /* Neutral text color */
+  font-family: Arial, sans-serif; /* More neutral font */
+  padding: 20px;
   text-align: center;
 }
 
-input[type="number"]:focus {
-  border-color: #ff85a2;
+.main-header {
+  color: #444; /* Neutral header color */
 }
 
+.main-nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.main-nav ul li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.main-nav ul li a {
+  text-decoration: none;
+  color: #666; /* Neutral link color */
+  font-weight: bold;
+}
+
+.main-nav ul li a:hover {
+  color: #333; /* Darker shade for hover effect */
+}
+
+
+/* MeasurementConversion Page Styles */
+.measurement-conversion-container {
+  background-color: #1a1a1a; /* Dark background */
+  color: #e0e0e0; /* Lighter text for contrast */
+  padding: 20px;
+  border-radius: 5px; /* Less rounded corners for a more angular look */
+  text-align: center;
+  max-width: 600px; /* Restrict max width for better focus */
+  margin: 20px auto; /* Centering the container */
+}
+
+.measurement-conversion-header {
+  color: #4CAF50; /* Green accent color */
+  margin-bottom: 20px;
+}
+
+.measurement-conversion-input {
+  background-color: #333;
+  border: 1px solid #4CAF50; /* Green accent border */
+  color: #ffffff; /* White text color */
+  margin: 10px 0; /* Space between inputs */
+  padding: 10px;
+  border-radius: 4px;
+}
+
+.measurement-conversion-button {
+  background-color: #4CAF50; /* Green accent color for button */
+  color: #ffffff; /* White text for button */
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.measurement-conversion-button:hover {
+  background-color: #367c39; /* Darker green on hover */
+}
+
+.measurement-conversion-result {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #333;
+  color: #4CAF50; /* Green color for result text */
+  border-radius: 4px;
+}
+
+
+.back-button {
+  padding: 8px 15px;
+  margin-top: 20px;
+  background-color: #444; /* Dark gray */
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.back-button:hover {
+  background-color: #555;
+}
+
+
+/* EqualSpacingCalculator Styles */
+.equal-spacing-calculator {
+  background-color: #f2f2f2;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  margin: 40px auto;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.equal-spacing-calculator h2 {
+  color: #333;
+  text-align: center;
+}
+
+.equal-spacing-calculator input,
+.equal-spacing-calculator button {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  box-sizing: border-box;
+}
+
+.equal-spacing-calculator button {
+  background-color: #007bff;
+  color: white;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.equal-spacing-calculator button:hover {
+  background-color: #0056b3;
+}
+
+.equal-spacing-calculator .result {
+  margin-top: 20px;
+  background-color: #e9ecef;
+  padding: 10px;
+  text-align: center;
+  border-radius: 5px;
+  color: #333;
+}
+
+.equal-spacing-calculator .back-button {
+  background-color: #6c757d;
+  margin-top: 10px;
+}
+
+/* Adjusting input focus outline */
+.equal-spacing-calculator input:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+
+/* General styling for the calculator */
+.pipe-length-calculator-container {
+  background: #333; /* Dark background for the metallic feel */
+  color: #f2f2f2; /* Light text for contrast */
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 90%;
+  max-width: 600px;
+  margin: 20px auto;
+}
+
+.pipe-length-calculator-container h2 {
+  color: #ffdd57; /* Golden-yellow, reminiscent of sparks */
+}
+
+.pipe-length-calculator-container select,
+.pipe-length-calculator-container input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  background: #444; /* Slightly lighter background for input fields */
+  border: 1px solid #777; /* Grey border for a metallic edge */
+  color: #fff;
+  border-radius: 4px;
+}
+
+.pipe-length-calculator-container button {
+  width: 100%;
+  padding: 12px;
+  background: #007bff; /* A vibrant blue, adding a pop of color */
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 15px;
+}
+
+.pipe-length-calculator-container button:hover {
+  background: #0056b3; /* Darker shade on hover */
+}
+
+.back-button {
+  background: #6c757d; /* Neutral, dark grey for the back button */
+  color: white;
+  padding: 10px 15px;
+  border-radius: 4px;
+  border: none;
+  margin-top: 15px;
+}
+
+.back-button:hover {
+  background: #5a6268; /* Slightly darker on hover */
+}
